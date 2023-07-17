@@ -1,0 +1,535 @@
+@font-face {
+  font-family: Nunito;
+  src: url("./assets/NunitoSans-Regular.ttf");
+  font-weight: 400;
+}
+
+/************ Default Css ************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  font-family: "Nunito", sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+p,
+a,
+li,
+button,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+@media (min-width: 1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+p.success {
+  color: green;
+}
+
+p.danger {
+  color: red;
+}
+
+/********** Navbar Css ***********/
+
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  z-index: 9999;
+  transition: 0.32s ease-in-out;
+}
+
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #ffffff;
+}
+nav.navbar a.navbar-brand img{
+  width: 9%;
+  margin: 10px;
+}
+
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+  opacity: 1;
+  color: #605dec !important;
+}
+
+span.navbar-text {
+  align-items: center;
+}
+
+.navbar-text button {
+  display: inline;
+  font-weight: 700;
+  color: #605dec;
+  border: 1px solid #605dec;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-text button span {
+  z-index: 1;
+}
+
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #605dec;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar-text button:hover {
+  color: #ffffff;
+}
+
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/********** Search Flight ***********/
+
+.search-flights{
+  margin-top: 1%;
+  background-size: cover;
+
+  height: auto;
+  background-image: url("./assets/world_map.svg");
+
+}
+.center-div {
+  width: 600px;
+  height: 55px;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.center-div h1 {
+  position: absolute;
+  font-family: "Nunito Sans" !important;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 96px;
+
+  text-align: center;
+
+  background: linear-gradient(145deg, #4e87fd, #8d59fd);
+
+  -webkit-background-clip: text; /* Safari/Chrome */
+  -webkit-text-fill-color: transparent;
+}
+
+.search-flights form {
+  display: inline-flex;;
+  padding: 8px 12px;
+  gap: 0px;
+  background: #ffffff;
+  border-radius: 4px;
+  height: 50px;
+  flex-grow: 0;
+  margin-top: 40%;
+  align-items: center;
+}
+.search-flights .form-inline {
+  text-align: center;
+}
+
+.search-flights .form-control {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  
+}
+
+.search-flights input {
+  height: 55px;
+  margin-left: -5px;
+  
+}
+
+.search-flights button {
+  font-size: 20px;
+  background-color: #605dec;
+  height: 55px;
+  color: #ffffff;
+  width: 150px;
+  margin-left: -10px;
+  
+}
+
+.flights{
+  padding: 18px;
+  transition: 0.32s ease-in-out;
+  outline: 1px solid #d7d7f5;
+  width: 60%;
+  height: 500px;
+  margin: 20px;
+  border-radius: 20px;
+  
+}
+
+.flights-card{
+  width: 100%;
+  display: inline-flex;
+  padding: 18px;
+  margin: 2px;
+  align-items: center;
+}
+
+.flights-card img{
+  width: 50px;
+  height: 50px;
+}
+
+.flights-card h1{
+  font-weight: 300;
+  margin: 2px 5px 2px 20px;
+}
+
+.flights-card h4{
+  font-weight: 200;
+  margin: 2px 5px 2px 20px;
+}
+
+
+
+/********** Find Adventure *************/
+
+.find-adventure {
+  margin: 50px;
+  color: #6E7491;
+  
+
+}
+
+.find-adventure span{
+  color: #605DEC;
+}
+
+
+
+.flight-wrapper {
+  padding-bottom: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding-top: 50px;
+}
+
+.flight-deals-card{
+  width: calc(33.33% - 10px);
+  height: 390px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.212);
+  background: white;
+  border-radius: 20px;
+  justify-content: center;
+  position: relative;
+  transition: all .4s;
+  margin-right:20px;
+  display: inline-block;
+  
+}
+
+
+.flight-deals-card img{
+  width:100%;
+  height:390px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+  cursor: pointer;
+  z-index: 10;
+  transition: all .4s;
+  object-fit: cover;
+}
+
+
+.flight-deals-card ul{
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+.flight-deals-card:hover img{
+  margin-top:-30px;
+}
+
+.flight-deals-card:hover{
+  width: calc(33.33% - 5px);
+}
+
+.flight-deals-card::before{
+  content: 'Saurabh';
+  letter-spacing: 0.2em;
+  position: absolute;
+  bottom: 8px;
+  left:20px;
+  color:rgb(51,51,51);
+  font-size: 0.6em;
+  font-family: 'Nunito',sans-serif;
+  font-weight: 700;
+}
+
+.flight-deals-horizontal{
+  width: calc(100% - 10px);
+  height: 390px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.212);
+
+}
+
+.flight-deals-horizontal img{
+  width: calc(100%);
+  height: 390px;
+  border-radius: 20px;
+}
+
+
+/*********** Explore Unique **********/
+
+
+
+.explore-unique{
+  margin: 50px;
+  color: #6E7491;
+}
+
+.explore-unique span{
+  color: #5CD6C0;
+}
+
+.explore-unique-wrapper{
+  overflow-x: auto;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.explore-unique-card{
+  width: calc(33.33% - 50px);
+  height: 430px;
+  box-shadow: 0 10px 10px rgba(0,0,0,0.212);
+  background: white;
+  border-radius: 20px;
+  justify-content: center;
+  position: relative;
+  margin-right:20px;
+  display: inline-block;
+}
+
+.explore-unique-card img{
+  width: 100%;
+  height: 430px;
+  border-radius: 20px;
+
+}
+
+.explore-button{
+  display: block;
+  text-align: center;
+  margin: 35px;
+  
+}
+.explore-button button{
+  font-weight: 700;
+  color: #605dec;
+  border: 1px solid #605dec;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.explore-button button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #605dec;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+.explore-button button:hover {
+  color: #ffffff;
+}
+
+.explore-button button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.users-review-wrapper{
+  overflow-x: auto;
+  white-space: nowrap;
+  
+}
+
+.users-review-card{
+  width: calc(33.33% - 50px);
+  height: 430px;
+
+  background: white;
+  display: inline-block;
+ 
+  position: relative;
+  margin-right:20px;
+  padding: 10px;
+  
+}
+
+
+
+.users-review-card img{
+   width:75px;
+   height: 75px;
+   
+   border-radius: 50px;
+   padding-left: 2px;
+   
+}
+
+.col-sm-9 span img{
+  width:20px;
+  height:25px;
+}
+
+.users-review-card h4{
+  font-family: 'Nunito',sans-serif;
+  font-weight: 200;
+}
+.users-review-card h5{
+   font-family: 'Nunito',sans-serif;
+   font-weight: 200;
+ 
+   
+}
+
+.users-review-card p{
+   font-family: 'Nunito',sans-serif;
+   white-space: normal;
+   font-size: 16px;
+   
+}
+
+.footer{
+  display: flex;
+  white-space: normal;
+}
+
+.footer-card{
+  width: calc(20% - 10px);
+  height: 430px;
+
+  background: #ffffff;
+  display: inline-block;
+ 
+  position: relative;
+  margin-right:20px;
+  padding: 10px;
+}
+
+.footer-card img{
+  
+}
+.footer-card h3{
+  font-family: 'Nunito',sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+
+}
+.footer-card h4{
+   font-family: 'Nunito',sans-serif;
+   font-weight: 100;
+   letter-spacing: 0.1em;
+   line-height: 2em;
+   font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
