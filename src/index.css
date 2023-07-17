@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: Nunito;
+    src: url("./assets/NunitoSans-Regular.ttf");
+    font-weight: 400;
+  }
+
+body{
+    background-color: #ffffff;
+    font-family: "Nunito", sans-serif !important;
+}
+
+
+.fixed-navbar{
+    position: fixed;
+    top:0;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    width: 100%;
+    transition:  0.32s ease-in-out;
+   
+}
+
+.scrolled{
+    background: #ffffff;
+    height: 4rem;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+
+  
+  
+  
+  
+  
+
