@@ -17,7 +17,9 @@ import { DialogDefault } from './components/DialogDefault';
 function App() {
   return (
     <>
-    <DialogDefault/>
+    <NavBar/>
+    
+    {/*<DialogDefault/>*/}
   
     <SearchFlight/>
     <FindAdventure/>

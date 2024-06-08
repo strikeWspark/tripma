@@ -23,9 +23,9 @@ export const DialogDefault = () => {
         size="xs"
         open={open}
         handler={handleOpen}
-        className="bg-black shadow-none justify-center m-4 p-4"
+        className="mx-auto"
       >
-        <Card className="mx-auto w-full max-w-[24rem]">
+        <Card className=" w-full max-w-[24rem]">
           <CardBody className="flex flex-col gap-4">
             
             <div className='text-xl p-4'>
